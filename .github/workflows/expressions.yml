@@ -9,4 +9,4 @@ jobs:
       - name: Github Context-1
         run: echo "${{ github }}"
       - name: Ouput Commands
-        run: echo "${{ toJSON(github) }}"
+        run: echo "${{ toJSON(steps) }}"
