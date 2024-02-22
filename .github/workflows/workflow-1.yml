@@ -12,7 +12,7 @@ jobs:
   second-job:
     runs-on: Ubuntu-latest
     steps:
-      - name: Welcome greeting
+      - name: Greeting-2
         run: echo "Welcome to CI and CD "
-      - name: Thank you Message
+      - name: Thanks -2
         run: echo "Thank you learning devops "
