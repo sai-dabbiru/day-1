@@ -9,12 +9,11 @@ on:
   
 jobs:
   first-job:
-    runs-on: Ubuntu-latest
+    runs-on: self-hosted
     steps:
-      - name: Welcome greeting
-        run: echo "Welcome to Github Actions! "
-      - name: Thank you Message
-        run: echo "Thank you for using Github Actions! "
+      - name: Check Node Installation
+        run: node -v
+    
 
   
   second-job:
