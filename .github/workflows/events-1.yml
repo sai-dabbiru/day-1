@@ -16,4 +16,14 @@ jobs:
       - name: Thank you Message
         run: echo "Thank you for using Github Actions! "
 
+  
+  second-job:
+    runs-on: Ubuntu-latest
+    needs: first-job
+    steps:
+      - name: Greeting-2
+        run: echo "Welcome to CI and CD "
+      - name: Thanks -2
+        run: echo "Thank you learning devops "
+
  
