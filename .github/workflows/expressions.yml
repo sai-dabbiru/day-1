@@ -8,5 +8,7 @@ jobs:
         run: echo "${{ 'This is an expression'}}"
       - name: Github Context-1
         run: echo "${{ github }}"
-      - name: Ouput Commands
-        run: echo "${{ toJSON(steps) }}"
+      - name: Ouput Commands-1
+        run: echo "${{ toJSON(github.github.ref) }}"
+      - name: Ouput Commands-2
+        run: echo "${{ toJSON(runner.name && runner.os) }}"
