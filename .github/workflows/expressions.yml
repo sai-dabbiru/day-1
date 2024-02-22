@@ -6,3 +6,5 @@ jobs:
     steps:
       - name: Github Expression step-1
         run: echo "${{ 'This is an expression'}}"
+      - name: Github Context-1
+        run: echo "${{ github }}"
