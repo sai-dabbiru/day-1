@@ -8,3 +8,11 @@ jobs:
         run: echo "Welcome to Github Actions! "
       - name: Thank you Message
         run: echo "Thank you for using Github Actions! "
+
+  second-job:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: Welcome greeting
+        run: echo "Welcome to CI and CD "
+      - name: Thank you Message
+        run: echo "Thank you learning devops "
