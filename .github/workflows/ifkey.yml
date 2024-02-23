@@ -3,15 +3,18 @@ on: [workflow_dispatch , push]
 run-name: Demo by @${{ github.actor }}
 
 jobs:
-  info:
+  job-1:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch'
     steps:
       - name: Github Expression step-1
         run: echo "${{ 'This will run only if event is push'}}"     
-      - name: Contexts
-        run: |
-          
+  
+  job-2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Contexts
+      run: |
           echo "${{ toJson(runner)}}"
           echo "${{ toJson(steps)}}"
           echo "${{ toJson(job)}}"
