@@ -16,7 +16,7 @@ jobs:
     - name: Contexts
       run: |
           echo "${{ toJson(runner)}}"
-          echo "${{ toJson(steps)}}"
+          echo "${{ toJson(github)}}"
           echo "${{ toJson(job)}}"
         
   
