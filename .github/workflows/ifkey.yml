@@ -1,0 +1,13 @@
+name: If Key Demo
+on: [workflow_dispatch , push]
+run-name: Demo by @${{ github.actor }}
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Github Expression step-1
+        run: echo "${{ 'This will run only if event is push'}}"     
+  
+
