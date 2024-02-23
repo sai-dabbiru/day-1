@@ -12,6 +12,9 @@ jobs:
       - name: Runs of Failure
         if: failure()
         run: echo "This will run only if the job fails"
+      - name: Runs on Step Failure
+        if: steps.Fail.conclusion == 'failure'
+        run: echo "This will run only if the step fails"
       - name: Always Runs
         if: always()
         run: echo "This will always run"
