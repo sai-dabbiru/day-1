@@ -14,9 +14,9 @@ jobs:
         if: failure()
         run: |
           echo "This will run only if the job fails"
-          echo ${{steps}}
+          echo ${{toJson(steps)}}
       - name: Runs on Step Failure
-        if: steps.step-2.conclusion == 'failure'
+        if: failure() && steps.step-2.conclusion == 'failure'
         run: echo "This will run only if the step fails"
       - name: Always Runs
         if: always()
