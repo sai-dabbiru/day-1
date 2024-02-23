@@ -8,13 +8,15 @@ jobs:
       - name: step-1
         run: sleep 20
       - name: Fail
-        id: Fail
+        id: step-2
         run: exit 1
       - name: Runs of Failure
         if: failure()
-        run: echo "This will run only if the job fails"
+        run: |
+          echo "This will run only if the job fails"
+          echo ${{steps}}
       - name: Runs on Step Failure
-        if: steps.Fail.conclusion == 'failure'
+        if: steps.step-2.conclusion == 'failure'
         run: echo "This will run only if the step fails"
       - name: Always Runs
         if: always()
