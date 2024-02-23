@@ -9,5 +9,12 @@ jobs:
     steps:
       - name: Github Expression step-1
         run: echo "${{ 'This will run only if event is push'}}"     
+      - name: Contexts
+        run: |
+          
+          echo "${{ toJson(runner)}}"
+          echo "${{ toJson(steps)}}"
+          echo "${{ toJson(jobs)}}"
+        
   
 
